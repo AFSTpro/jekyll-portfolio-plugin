@@ -25,7 +25,7 @@ module Jekyll
 
       Dir.foreach(portfolio_dir_path + "/" + @project_folder) do |screenshot|
         if(screenshot != "." && screenshot != "..")
-          
+
           link = portfolio_root + "/" + @project_folder
           img = portfolio_img_root + "/" + @project_folder + "/" + screenshot
           title = File.basename(screenshot, File.extname(screenshot))
@@ -34,23 +34,23 @@ module Jekyll
           big_img = img.sub("small-", "")
 
           if(title.index "small-")
-            
+
 
             content += '<div class="gallery-item">'
             content += '<a rel="gallery1" title="' + real_title + '" href="' + big_img + '" class="fancybox"><img src="' + img + '"></a>'
             content += '</div>'
 
           end
-          
+
         end
       end
 
- 
-      
-      
+
+
+
 
       return content
-      
+
     end
   end
 end

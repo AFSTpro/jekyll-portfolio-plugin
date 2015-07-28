@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
 var rename = require("gulp-rename");
 var imagemin = require('gulp-imagemin');
-var clean = require('gulp-clean');
+var clean = require('del');
 
 gulp.task('clean', function(){
     return gulp.src('source/images/pages/projects', {read: false})
